@@ -1,5 +1,9 @@
 # VE-cadherin-Patch-Classification
 
+A quantitive image analysis software developed by Andrew Philippides, written in Matlab, for the 2014 paper ‘The role of differential VE-cadherin dynamics in cell rearrangement during angiogenesis’  published in nature cell biology. Bentley, K., Franco, C., Philippides, A. et al. The role of differential VE-cadherin dynamics in cell rearrangement during angiogenesis. Nat Cell Biol 16, 309–321 (2014). https://doi.org/10.1038/ncb2926
+
+The software was used to both automatically and manually classify the VE-cadherin pattern in individual square patches of 3D projections of confocal image z-stacks of blood vessels.
+
 ## Initial Setup
 
 To let Matlab know where to look for commands, the path to the source code must be set. Open Matlab and click ‘Set Path’ in the Home tab. In the window that pops up click ‘Add with Subfolders…’ and navigate to the folder where the source code is then save and close. This only needs to be done once.
@@ -12,26 +16,26 @@ When using the software, Matlab’s current folder must be set to the location o
 
 ## Program use
 
-The ‘PatchAndClassifyFiles’ command acts as the main function for the program. Type this command into Matlab’s Command Window to be presented with the list following options:
+The ‘PatchAndClassifyFiles’ command acts as the main function for the program. Type this command into Matlab’s Command Window to be presented with the list of commands:
 
-  1)	Mask and patch files in the folder
-    - Creates a mask of the images in the current folder and splits the images into patches. These patches are saved as separate .mat files. This only needs to be         done once.
+  1. **Mask and patch files in the folder**
+    ⋅⋅* Creates a mask of the images in the current folder and splits the images into patches. These patches are saved as separate .mat files. This only needs to be         done once.
 
-  2)	Hand classify
-    -	Hand classify the .mat files in the current folder.
+  2. **Hand classify**
+    ⋅⋅*	Hand classify the .mat files in the current folder.
 
-  3)	Show and save results (CSVs + plots)
-    - Displays plots of results and saves these results to .csv files
+  3. **Show and save results (CSVs + plots)**
+    ⋅⋅* Displays plots of results and saves these results to .csv files
 
-  4)	Show and save results (reconstruct images as heatmaps)
-    -	Reconstructs and saves the images as heatmaps
+  4. **Show and save results (reconstruct images as heatmaps)**
+    ⋅⋅*	Reconstructs and saves the images as heatmaps
 
-  5) Pick Thresholds for the auto classification
-  6) Auto classify
-  7) See results from auto classification
-  8) Show coloc data and reconstruct coloc image
-  9) Combine hand classify results
-  0) Exit
+  5. **Pick Thresholds for the auto classification**
+  6. **Auto classify**
+  7. **See results from auto classification**
+  8. **Show coloc data and reconstruct coloc image**
+  9. **Combine hand classify results**
+  0. **Exit**
 
 ### Command 1: Mask and patch files in the folder
 
