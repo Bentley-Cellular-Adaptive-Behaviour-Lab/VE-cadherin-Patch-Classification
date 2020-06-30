@@ -22,7 +22,7 @@ The ‘PatchAndClassifyFiles’ command acts as the main function for the progra
     ⋅⋅* Creates a mask of the images in the current folder and splits the images into patches. These patches are saved as separate .mat files. This only needs to be done once.
 
   2. **Hand classify**
-  ⋅⋅*	Hand classify the .mat files in the current folder.
+    *	Hand classify the .mat files in the current folder.
 
   3. **Show and save results (CSVs + plots)**
     ⋅⋅* Displays plots of results and saves these results to .csv files
