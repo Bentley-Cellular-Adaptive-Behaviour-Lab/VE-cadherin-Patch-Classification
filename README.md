@@ -8,7 +8,7 @@ The software was used to both automatically and manually classify the VE-cadheri
 
 To let Matlab know where to look for commands, the path to the source code must be set. Open Matlab and click ‘Set Path’ in the Home tab. In the window that pops up click ‘Add with Subfolders…’ and navigate to the folder where the source code is then save and close. This only needs to be done once.
 
-*GIF of the above*
+![initial setup set path](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/step1.gif)
 
 When using the software, Matlab’s current folder must be set to the location of the .tif or .lsm files you want to be classified.
 
