@@ -1,6 +1,6 @@
 # VE-cadherin-Patch-Classification
 
-A quantitive image analysis software developed by Andrew Philippides, written in Matlab, for the 2014 paper ‘The role of differential VE-cadherin dynamics in cell rearrangement during angiogenesis’  published in nature cell biology. Bentley, K., Franco, C., Philippides, A. et al. The role of differential VE-cadherin dynamics in cell rearrangement during angiogenesis. Nat Cell Biol 16, 309–321 (2014). https://doi.org/10.1038/ncb2926
+A quantitive image analysis software developed by Andrew Philippides, written in Matlab, for the 2014 paper ‘The role of differential VE-cadherin dynamics in cell rearrangement during angiogenesis’  published in nature cell biology: [Bentley, K., Franco, C., Philippides, A. et al. The role of differential VE-cadherin dynamics in cell rearrangement during angiogenesis. Nat Cell Biol 16, 309–321 (2014)](https://doi.org/10.1038/ncb2926). 
 
 The software was used to both automatically and manually classify the VE-cadherin pattern in individual square patches of 3D projections of confocal image z-stacks of blood vessels.
 
@@ -18,8 +18,8 @@ When using the software, Matlab’s current folder must be set to the location o
 
 The ‘PatchAndClassifyFiles’ command acts as the main function for the program. Type this command into Matlab’s Command Window to be presented with the list of commands:
 
-  1. **Mask and patch files in the folder**
-    ⋅⋅* Creates a mask of the images in the current folder and splits the images into patches. These patches are saved as separate .mat files. This only needs to be         done once.
+⋅⋅⋅1. **Mask and patch files in the folder**
+⋅⋅⋅⋅⋅⋅⋅⋅* Creates a mask of the images in the current folder and splits the images into patches. These patches are saved as separate .mat files. This only needs to be done once.
 
   2. **Hand classify**
     ⋅⋅*	Hand classify the .mat files in the current folder.
