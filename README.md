@@ -18,8 +18,8 @@ When using the software, Matlab’s current folder must be set to the location o
 
 The ‘PatchAndClassifyFiles’ command acts as the main function for the program. Type this command into Matlab’s Command Window to be presented with the list of commands:
 
-⋅⋅⋅1. **Mask and patch files in the folder**
-⋅⋅⋅⋅⋅⋅⋅⋅* Creates a mask of the images in the current folder and splits the images into patches. These patches are saved as separate .mat files. This only needs to be done once.
+  1. **Mask and patch files in the folder**
+    ⋅⋅* Creates a mask of the images in the current folder and splits the images into patches. These patches are saved as separate .mat files. This only needs to be done once.
 
   2. **Hand classify**
     ⋅⋅*	Hand classify the .mat files in the current folder.
