@@ -17,12 +17,14 @@ When using the software, Matlab’s current folder must be set to the location o
 ## Program use
 
 The ‘PatchAndClassifyFiles’ command acts as the main function for the program. Type this command into Matlab’s Command Window to be presented with the list of commands:
+1. one
+   * nested
 
   1. **Mask and patch files in the folder**
     ⋅⋅* Creates a mask of the images in the current folder and splits the images into patches. These patches are saved as separate .mat files. This only needs to be done once.
 
   2. **Hand classify**
-    *	Hand classify the .mat files in the current folder.
+     *	Hand classify the .mat files in the current folder.
 
   3. **Show and save results (CSVs + plots)**
     ⋅⋅* Displays plots of results and saves these results to .csv files
@@ -31,6 +33,7 @@ The ‘PatchAndClassifyFiles’ command acts as the main function for the progra
     ⋅⋅*	Reconstructs and saves the images as heatmaps
 
   5. **Pick Thresholds for the auto classification**
+     * nested
   6. **Auto classify**
   7. **See results from auto classification**
   8. **Show coloc data and reconstruct coloc image**
