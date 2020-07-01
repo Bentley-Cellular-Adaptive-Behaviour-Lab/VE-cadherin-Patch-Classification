@@ -46,7 +46,8 @@ Figures will be presented after choosing these options. It is recommended that y
 
 You will be asked for the threshold for each slice. Enter a new threshold or -1 to ignore the current slice. If you do not want to ignore the current slice, once the desired threshold is entered, press return. This will create the .mat files for each patch of the slice.
 
-*GIF of the above*
+![command 1 example](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/command1.gif)
+
 
 ### Command 2: Hand classify
 
