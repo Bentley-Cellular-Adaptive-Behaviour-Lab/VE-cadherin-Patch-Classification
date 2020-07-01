@@ -56,11 +56,11 @@ Each slice can be classified as 1: Remodelling, 2: Stable, 3: Mixed, 4: Empty.
 
 For classification 1 and 2 you will also need to enter the ‘strength’ of this classification. A value from 1: high, 2: medium,  3: low. 
 
-GIF
+![command2 part1 example](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/command2_part1.gif)
 
 If classification 3 is chosen, as it is mixed you will need to enter the strength of how ‘Remodelling’ the image is and then the strength of how ‘Stable’ it is.
 
-GIF
+![command2 part2 example](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/command2_part2.gif)
 
 Whilst cycling through, text above the image shows the current patch number out of the total. The text below will show the classification of the patch  and the strength of this classification if the patch has already been classified. Once all patches have been given a classification ‘ALL PATCHES CLASSIFIED’ will be prefixed to the patch number text above the image. However, you can still cycle through the patches choosing new classifications / strengths. You will also have the option to cycle back through the patches by entering 0 to go back to the previous patch.
 
@@ -72,7 +72,7 @@ Collates results from groups of files or all files into plots and CSVs. These re
 
 The command will first display all the hand classified .mat files in the HandClassified folder. By default, it assumes that the files are grouped by ‘ctrl’ and ‘mutant’ prefix to the ‘_Patch*patch number*HandClassRnd.mat’ files. If this is the case press enter. If the files are grouped by different prefixes or if you want to group all the files together press 0. This will ask you to enter the file starts to all the different groups or pressing return on its own will group all the files. Once finished, the plots will be displayed and the results will be saved into three different csvs: ‘num_patches_strong_remodelling_to_strong_stable.csv’, ‘number_non_empty_patches_and_total_num_patches.csv’ and ‘percent_patches_strong_remodelling_to_strong_stable.csv’. The plot will be saved as ‘handclassified_results_plot.png’.
 
-GIF
+![command3 example](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/command3.gif)
 
 ### Command 4: Show and save results (Show and save results (reconstruct images as heatmaps)
 
