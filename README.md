@@ -78,7 +78,7 @@ GIF
 
 Reconstructs and saves the images as heatmaps. These are saved into a ‘Heatmaps’ subfolder within the Handclassified folder as .tiff files.
 
-![command4 example](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/command4.mp4)
+![command4 example](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/command4.gif)
 
 
 ### Command 5: Pick Thresholds for the auto classification
