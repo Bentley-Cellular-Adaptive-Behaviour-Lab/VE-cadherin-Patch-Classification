@@ -1,8 +1,8 @@
 # VE-cadherin-Patch-Classification
 
-A quantitive image analysis software developed by Andrew Philippides, written in Matlab, for the 2014 paper ‘The role of differential VE-cadherin dynamics in cell rearrangement during angiogenesis’  published in nature cell biology: [Bentley, K., Franco, C., Philippides, A. et al. The role of differential VE-cadherin dynamics in cell rearrangement during angiogenesis. Nat Cell Biol 16, 309–321 (2014)](https://doi.org/10.1038/ncb2926). 
+A quantitive image analysis software written in Matlab, developed by Andrew Philippides (University of Sussex) in collaboration with Katie Bentley (while at Cancer Research UK, LRI / Beth Israeal Medical Center, Harvard Medcial School US) for the 2014 paper ‘The role of differential VE-cadherin dynamics in cell rearrangement during angiogenesis’  published in nature cell biology: [Bentley, K., Franco, C., Philippides, A. et al. The role of differential VE-cadherin dynamics in cell rearrangement during angiogenesis. Nat Cell Biol 16, 309–321 (2014)](https://doi.org/10.1038/ncb2926). 
 
-The software was used to both automatically and manually classify the VE-cadherin pattern in individual square patches of 3D projections of confocal image z-stacks of blood vessels.
+The software was used to 1) manually classify VE-cadherin junctional patterns in individual square patches of 3D confocal image z-stacks of blood vessels aswell as 2) automatically extract and quantify morphological features of segmented objects in the patches.
 
 ## Initial Setup
 
