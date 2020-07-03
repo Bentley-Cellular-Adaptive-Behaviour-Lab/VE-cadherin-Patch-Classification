@@ -41,8 +41,9 @@ The ‘PatchAndClassifyFiles’ command acts as the main function for the progra
 
 Files can be processed as either individual images or stacks of images. You will be presented with this option first.
 
-Then enter the mask channel, followed by the channel you want to classify on then whether you want a colocalised channel.
-Figures will be presented after choosing these options. It is recommended that you dock these figures into Matlab so they can be viewed above the command window.
+Then enter the mask channel, followed by the channel you want to classify on then whether you want a colocalised channel. If you include a colocalised channel it means you can compare how the area of signal over a threshold in a different channel correlates with the classified shape of VEcaderin in each patch, e.g. to see whether cells with more active junctions are also higher in exression of a certain protein. 
+
+Figures will be presented after choosing these options. It is recommended that you dock these figures into Matlab so they can be viewed above the command window. To dock click the little curved black arrow in the top corner of the figure.
 
 You will be asked for the threshold for each slice. Enter a new threshold or -1 to ignore the current slice. If you do not want to ignore the current slice, once the desired threshold is entered, press return. This will create the .mat files for each patch of the slice.
 
