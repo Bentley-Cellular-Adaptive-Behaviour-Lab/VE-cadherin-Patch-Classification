@@ -1,0 +1,31 @@
+function[ix,iy]=IntersectionPointOld(p1,p2)
+[m1,c1]=GetMC(p1);
+[m2,c2]=GetMC(p2);
+if(isinf(m1))
+    if(isinf(m2))
+        if(c1==c2)
+            ix=NaN;
+            iy=NaN;
+        else
+            ix=inf;
+            iy=inf;
+        end
+    else
+        ix=c1;
+        iy=m2*ix+c2;
+    end
+elseif(isinf(m2))
+    ix=c2;
+    iy=m1*ix+c1;
+elseif(m1==m2)
+    if(c1==c2)
+        ix=NaN;
+        iy=NaN;
+    else
+        ix=inf;
+        iy=inf;
+    end
+else
+    ix=(c2-c1)/(m1-m2);
+    iy=m1*ix+c1;
+end

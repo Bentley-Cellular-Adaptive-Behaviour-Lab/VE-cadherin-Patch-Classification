@@ -1,0 +1,9 @@
+function[m,c]=GetMC(p)
+d=diff(p);
+if(d(1)==0)
+    m=inf;
+    c=p(1,1);
+else
+    m=d(2)/d(1);
+    c=p(1,2)-m*p(1,1);
+end
