@@ -753,11 +753,7 @@ else
         pause
     end
 end
-% clear the figures
-for i=1:3
-    figure(i)
-    clf
-end
+
 
 % % this plots everything on one figure
 % plopt=1;
@@ -765,8 +761,15 @@ n=ceil(sqrt(length(i_pl)));
 m=n;
 % this plots everything on separate figures
 plopt=2;
+numplots = length(i_pl);
 
-for i=1:length(i_pl)
+% clear the figures
+for i=1:2*numplots
+    figure(i)
+    clf
+end
+
+for i=1:numplots
 %     maxbin=prctile(vs(:,i_pl(i)),99.5)
     maxbin=max(vs(:,i_pl(i)));
     if(IntVars(i_pl(i)))
@@ -947,7 +950,7 @@ if((opt==3)||(isdir('./HandClassified')))
     cl=[dat.class];
     
     % plot the distribution of the variables i_pl for all the data
-    PlotAutoClassDistributions(classes,i_pl,vs,cl,strs,astrall,'all',3)
+    PlotAutoClassDistributions(classes,i_pl,vs,cl,strs,astrall,'all',2*numplots+1)
     % then repeat above but split the data according to fn_starts
     for i=1:length(fn_startlist)
         % find rows mathcing the fn_starts
@@ -957,7 +960,7 @@ if((opt==3)||(isdir('./HandClassified')))
         vf=vs(i1,:);
         % pot the distributions
         PlotAutoClassDistributions(classes,i_pl,vf,cf,strs,astrall,...
-            xstr(i),3+i)
+            xstr(i),2*numplots+1+i)
     end
 %     disp('this shows the # big objects not including lines: is this ok??')
 end
