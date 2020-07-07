@@ -31,10 +31,16 @@ The ‘PatchAndClassifyFiles’ command acts as the main function for the progra
      * Reconstructs and saves the images as heatmaps
 
   5. **Pick Thresholds for the auto classification**
+     * Allows user to pick threshold based either on std deviation filter or raw image with options to adjust this threshold 
+     * Runs auto classification based on chosen threshold when confirmed.
+     
   6. **Auto classify**
+     * Runs auto classification which can be based on one five available options.
+     * Automatically outpots and plots results
+     
   7. **See results from auto classification**
-  8. **Show coloc data and reconstruct coloc image**
-  9. **Combine hand classify results**
+     * Displays auto classification results based on either std deviation filter, raw image or combined data from multiple files
+
   0. **Exit**
 
 ### Command 1: Mask and patch files in the folder
@@ -85,4 +91,71 @@ Reconstructs and saves the images as heatmaps. These are saved into a ‘Heatmap
 
 ### Command 5: Pick Thresholds for the auto classification
 
-You will first be given the option to auto classify based on a std deviation filter or based on the raw image.
+You will first be given the option to auto classify based on a std deviation filter or based on the raw image. 
+
+Dock the figure that appears. 4 images are shown on this figure:
+- Top left: original image
+- Bottom left: std deviation filtered image of raw image
+- Top right: shows all the above threshold objects
+- Bottom right: shows each object given the current threshold. Each object has a unique colour.
+
+*GIF OF THE ABOVE*
+
+Hover and click on the docked figure to select the window. This will allow the following commands to be inputted:
+- UP arrow: increase threshold
+- DOWN arrow: decrease threshold
+- T: switch between std deviation filter and raw image (this will change the 'THRESHOLDING THIS' text to switch to the currently selected)
+- N: move to next patch. Use this to check current threshold is compatible with other patches.
+- Return: confirm threshold value and run an auto classification based on this hand picked threshold (equivalent to option 2 from command 6).
+
+* GIF OF ABOVE *
+
+### Command 6: Auto classify
+
+Runs auto classification based on one of the following options:
+1) Std deviation filter
+2) Hand picked threshold (based on raw image) from command 5.
+3) Pre-set threshold per slice (based on raw image). The hand picked threshold from command 5 applied to every slice in the image.
+4) Auto threshold per slice (based on raw image)
+5) Auto threshold per patch (based on raw image)
+
+After processing command 7 will automatically be run. The results from this command will be shown so the initial requirement in command 7 to declare which results to show is skipped. 
+
+*GIF of above do we need 4 / 5??*
+
+### Command 7: See results from auto classification
+
+Outputs auto classification results from either:
+1) std deviation filter 
+2) raw image
+3) combined data from multiple files. This can be used to combine data from other folders with the auto classification results from the current folder.
+
+You will be asked how to group the data. Enter the number of groups you want or 0 to group each file separately or press return to put include all files into one group.
+
+If a number of groups is entered then the list of file numbers and their corresponding file names will be displayed. Enter the numbers of the file you want to be in the current group and press return. Either repeat again to add a different file into the current group or if finished enter return on its own. This will be repeated for each of the specified groups.
+
+* GIF OF THE ABOVE*
+
+The following figures will be displayed:
+
+Figure 1: Box plots of number of big objects for each group
+Figure 2: Histogram of number of big objects for each group
+Figure 3: Box plots of number of small objects for each group
+Figure 4: Histogram of number of small objects for each group
+Figure 5: Mean and std deviation 'wigglyness' box plot of big objects for each group
+Figure 6: Histogram of 'wigglyness' (remodelling) of big objects for each group
+Figure 7: Mean and std deviation eccentricity box plots of big objects for each group
+Figure 8: Eccentricity histogram of the big objects for each group
+
+The figures after the initial 8 will contain 4 subplots:
+
+Top left: Number of big objects from the hand clasified results
+Top right: Number of small objects from the hand classified results
+Bottom left: Mean and std deviation 'wigglyness' (remodelling) box plot of big objects from hand classified results
+Bottom right: Mean and std deviation eccentricity box plot of big objects from hand classified results
+
+Figure 9: Results from all groups included together
+Figure 10+: One of these figures for each individual group
+
+* GIF OF THE ABOVE *
+
