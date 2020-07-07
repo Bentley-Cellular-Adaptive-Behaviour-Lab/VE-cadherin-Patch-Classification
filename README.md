@@ -17,7 +17,9 @@ The software was used to 1) manually classify VE-cadherin junctional patterns in
 ## Program use
 
 The ‘PatchAndClassifyFiles’ command acts as the main function for the program. Type this command into Matlab’s Command Window to be presented with the list of commands:
+
   0. **Exit**
+     * Exit the PatchAndClassifyFiles command loop
   
   1. **Mask and patch files in the folder**
      * Creates a mask of the images in the current folder and splits the images into patches. These patches are saved as separate .mat files. This only needs to be done once.
@@ -103,11 +105,11 @@ Dock the figure that appears. 4 images are shown on this figure:
 *GIF OF THE ABOVE*
 
 Hover and click on the docked figure to select the window. This will allow the following commands to be inputted:
-- UP arrow: increase threshold
-- DOWN arrow: decrease threshold
-- T: switch between std deviation filter and raw image (this will change the 'THRESHOLDING THIS' text to switch to the currently selected)
-- N: move to next patch. Use this to check current threshold is compatible with other patches.
-- Return: confirm threshold value and run an auto classification based on this hand picked threshold (equivalent to option 2 from command 6).
+- **UP arrow:** increase threshold
+- **DOWN arrow:** decrease threshold
+- **T:** switch between std deviation filter and raw image (this will change the 'THRESHOLDING THIS' text to switch to the currently selected)
+- **N:** move to next patch. Use this to check current threshold is compatible with other patches.
+- **Return:** confirm threshold value and run an auto classification based on this hand picked threshold (equivalent to option 2 from command 6).
 
 * GIF OF ABOVE *
 
