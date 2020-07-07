@@ -17,7 +17,8 @@ The software was used to 1) manually classify VE-cadherin junctional patterns in
 ## Program use
 
 The ‘PatchAndClassifyFiles’ command acts as the main function for the program. Type this command into Matlab’s Command Window to be presented with the list of commands:
-
+  0. **Exit**
+  
   1. **Mask and patch files in the folder**
      * Creates a mask of the images in the current folder and splits the images into patches. These patches are saved as separate .mat files. This only needs to be done once.
 
@@ -41,7 +42,7 @@ The ‘PatchAndClassifyFiles’ command acts as the main function for the progra
   7. **See results from auto classification**
      * Displays auto classification results based on either std deviation filter, raw image or combined data from multiple files
 
-  0. **Exit**
+  
 
 ### Command 1: Mask and patch files in the folder
 
@@ -134,7 +135,7 @@ You will be asked how to group the data. Enter the number of groups you want or 
 
 If a number of groups is entered then the list of file numbers and their corresponding file names will be displayed. Enter the numbers of the file you want to be in the current group and press return. Either repeat again to add a different file into the current group or if finished enter return on its own. This will be repeated for each of the specified groups.
 
-* GIF OF THE ABOVE*
+![command 7 group files example](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/command7_1.gif)
 
 The following figures will be displayed:
 
@@ -157,5 +158,5 @@ Bottom right: Mean and std deviation eccentricity box plot of big objects from h
 Figure 9: Results from all groups included together
 Figure 10+: One of these figures for each individual group
 
-* GIF OF THE ABOVE *
+![command 7 figure output example](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/command7_2.gif)
 
