@@ -184,8 +184,10 @@ function[fn_starts]=GetFileStartsV2(all)
 WriteFileOnScreen(all,1);
 disp(' ');
 fn_starts=[];
-disp('enter number of groups; 0 = each file separately');
-ngroups=input('return = all files in 1 group: ');
+disp('File Grouping: Choose from one of the options below: ')
+disp('  - Enter number of groups');
+disp('  - Enter 0 to group each file separately')
+ngroups=input('  - Press return to included all files in 1 group: ');
 if(isequal(ngroups,0))
     for i=1:length(all)
         fn_starts(i).flist.name=all(i).name;
