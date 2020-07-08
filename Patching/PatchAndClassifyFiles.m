@@ -24,13 +24,11 @@ function PatchAndClassifyFiles
     disp('  5) Pick Thresholds for the auto classification');
     disp('  6) Auto classify');
     disp('  7) See results from auto classification');
-    disp('  8) Show coloc data and reconstruct coloc image');
-    disp('  9) Combine hand classify results');
     disp('  0) Exit');
-    inp=ForceNumericInput('Enter command number: ',1,1,0:9);
+    inp=ForceNumericInput('Enter command number: ',1,1,0:7);
 
     % get the list of files
-    if(~ismember(inp,[0,3,7,9]))
+    if(~ismember(inp,[0,3,7]))
         if(exist('SliceListToProcess.mat','file'))
             load SliceListToProcess;
             all=flist;
@@ -60,19 +58,7 @@ function PatchAndClassifyFiles
         ShowClassifyPatches;
     elseif(isequal(inp,4))
         Reconstruct_Images(all,1);
-    elseif(isequal(inp,8))
-        Reconstruct_Images(all,2);
-    elseif(isequal(inp,9))  
-        disp(' ');
-        disp('Enter 1 to get files for combining hand class data');
-        opt=input('Enter 2 to combine hand class data: ');
-        if(opt==1)
-            fend=input('Enter the last 3 letters of the files you want to process ("tif" or "lsm"): ','s');
-            all=dir(['*.' fend]);
-            ShowClassifyPatchesFiles(all);
-        else
-            CombineClassifyPatches;
-        end   
+        Reconstruct_Images(all,2); 
     elseif(isequal(inp,5))
         % to run the automatic classification, one
         % needs a threshold for objects based on the s.d. level or the image.
@@ -1261,7 +1247,7 @@ while 1
     subplot(2,2,4)
     xlabel('\uparrow\downarrow change threshold; n next patch; return end');
     subplot(2,2,3)
-    xlabel(['t thresh on ' tstr ', p thresh as ' pstr]);
+    xlabel(['t thresh on ' tstr]);
 
     [x,~,b]=ginput(1);
 
@@ -1286,8 +1272,6 @@ while 1
         else
             opt=2;
         end
-    elseif(isequal(b,'p')) 
-        tAsPc=mod(tAsPC+1,2);
     end
 end
 
