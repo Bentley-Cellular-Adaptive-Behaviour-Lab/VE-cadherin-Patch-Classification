@@ -140,25 +140,24 @@ If a number of groups is entered then the list of file numbers and their corresp
 ![command 7 group files example](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/command7_1.gif)
 
 The following figures will be displayed:
+ - **Figure 1:** Box plots of number of big objects for each group
+ - **Figure 2:** Histogram of number of big objects for each group
+ - **Figure 3:** Box plots of number of small objects for each group
+ - **Figure 4:** Histogram of number of small objects for each group
+ - **Figure 5:** Mean and std deviation 'wigglyness' box plot of big objects for each group
+ - **Figure 6:** Histogram of 'wigglyness' (remodelling) of big objects for each group
+ - **Figure 7:** Mean and std deviation eccentricity box plots of big objects for each group
+ - **Figure 8:** Eccentricity histogram of the big objects for each group
 
-Figure 1: Box plots of number of big objects for each group
-Figure 2: Histogram of number of big objects for each group
-Figure 3: Box plots of number of small objects for each group
-Figure 4: Histogram of number of small objects for each group
-Figure 5: Mean and std deviation 'wigglyness' box plot of big objects for each group
-Figure 6: Histogram of 'wigglyness' (remodelling) of big objects for each group
-Figure 7: Mean and std deviation eccentricity box plots of big objects for each group
-Figure 8: Eccentricity histogram of the big objects for each group
+The figures after the initial 8 contain 4 subplots:
 
-The figures after the initial 8 will contain 4 subplots:
+ - Top left: Number of big objects from the hand clasified results
+ - Top right: Number of small objects from the hand classified results
+ - Bottom left: Mean and std deviation 'wigglyness' (remodelling) box plot of big objects from hand classified results
+ - Bottom right: Mean and std deviation eccentricity box plot of big objects from hand classified results
 
-Top left: Number of big objects from the hand clasified results
-Top right: Number of small objects from the hand classified results
-Bottom left: Mean and std deviation 'wigglyness' (remodelling) box plot of big objects from hand classified results
-Bottom right: Mean and std deviation eccentricity box plot of big objects from hand classified results
-
-Figure 9: Results from all groups included together
-Figure 10+: One of these figures for each individual group
+ - **Figure 9:** Results from all groups included together
+ - **Figure 10+:** One of these figures for each individual group
 
 ![command 7 figure output example](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/command7_2.gif)
 
