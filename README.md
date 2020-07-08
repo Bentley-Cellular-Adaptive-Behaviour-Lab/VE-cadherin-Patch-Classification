@@ -151,10 +151,11 @@ The following figures will be displayed:
 
 The figures after the initial 8 contain 4 subplots:
 
- - Top left: Number of big objects from the hand clasified results
- - Top right: Number of small objects from the hand classified results
- - Bottom left: Mean and std deviation 'wigglyness' (remodelling) box plot of big objects from hand classified results
- - Bottom right: Mean and std deviation eccentricity box plot of big objects from hand classified results
+|         |            |
+| ------------- | ------------- |
+| **Top left:** Number of big objects from the hand classified results      | **Top right:** Number of small objects from the hand classified results |
+| **Bottom left:** Mean and std deviation 'wigglyness' (remodelling) box plot of big objects from hand classified results      | **Bottom right:** Mean and std deviation eccentricity box plot of big objects from hand classified results      |
+
 
  - **Figure 9:** Results from all groups included together
  - **Figure 10+:** One of these figures for each individual group
