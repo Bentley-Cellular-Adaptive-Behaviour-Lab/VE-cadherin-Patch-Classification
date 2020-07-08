@@ -102,7 +102,7 @@ Dock the figure that appears. 4 images are shown on this figure:
 - Top right: shows all the above threshold objects
 - Bottom right: shows each object given the current threshold. Each object has a unique colour.
 
-*GIF OF THE ABOVE*
+![command 5 example 1](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/command5_1.gif)
 
 Hover and click on the docked figure to select the window. This will allow the following commands to be inputted:
 - **UP arrow:** increase threshold
@@ -111,7 +111,7 @@ Hover and click on the docked figure to select the window. This will allow the f
 - **N:** move to next patch. Use this to check current threshold is compatible with other patches.
 - **Return:** confirm threshold value and run an auto classification based on this hand picked threshold (equivalent to option 2 from command 6).
 
-* GIF OF ABOVE *
+![command 5 example 2](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/command5_2.gif)
 
 ### Command 6: Auto classify
 
@@ -124,7 +124,7 @@ Runs auto classification based on one of the following options:
 
 After processing command 7 will automatically be run. The results from this command will be shown so the initial requirement in command 7 to declare which results to show is skipped. 
 
-*GIF of above do we need 4 / 5??*
+![command 6 example](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/command6.gif)
 
 ### Command 7: See results from auto classification
 
