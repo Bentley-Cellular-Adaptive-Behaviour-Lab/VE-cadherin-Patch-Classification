@@ -83,12 +83,13 @@ function PatchAndClassifyFiles
 
     elseif(isequal(inp,6))
         disp(' ');
-        disp('Enter 1 to auto-class based on std deviation filter');
-        disp('Enter 2-5 to auto-class based on raw image');
-        disp('2: Hand picked threshold')
-        disp('3: Pre-set threshold per slice')
-        disp('4: Auto threshold per slice')
-        opt=ForceNumericInput('5: Auto threshold per patch: ',1,1,1:5);
+        disp('NOTE: to classify based on set/auto threshold contact the authors')
+        disp(' ');
+        disp('Enter 1 to auto-classify based on std deviation filter');
+        opt=ForceNumericInput('Enter 2 to auto-classify based on raw image: ',1,1,1:2);
+        %disp('3: pre-set threshold per slice')
+        %disp('4: auto threshold per slice')
+        %opt=ForceNumericInput('5: auto threshold per patch: ',1,1,1:5);
         disp(' ')
         if(ismember(opt,2:5))
             disp('THRESHOLDING BASED ON IMAGE');
