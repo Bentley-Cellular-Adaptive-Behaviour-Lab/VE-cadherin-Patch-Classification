@@ -4,6 +4,8 @@ A quantitive image analysis software written in Matlab, developed by Andrew Phil
 
 The software was used to 1) manually classify VE-cadherin junctional patterns in individual square patches of 3D confocal image z-stacks of blood vessels aswell as 2) automatically extract and quantify morphological features of segmented objects in the patches.
 
+**Please note that the software was designed collaboratively between Bentley and Philippides so that parameters such as: patch size, definition of small/large objects, object properties to display such as wiggliness, hand classification classes), etc; were co-designed for the problem at hand. While they have proved useful in other studies if you need to vary parameters, or if you would like help to characterise a particular feature or texture you see in patches (see Section 7), please get in touch via [maybe set up an email?] as we may be able to help. Likewise, if you have suggestions for features (see eg section 6) get in touch. And finally, if you do use the software, we’d be grateful if you could email XX to let us know.**
+
 ## Initial Setup
 
 1. **Set Path:** To let Matlab know where to look for commands, the path to the source code must be set. Open Matlab and click ‘Set Path’ in the Home tab. In the window that pops up click ‘Add with Subfolders…’ and navigate to the folder where the source code is then save and close. This only needs to be done once.
@@ -94,7 +96,7 @@ Reconstructs and saves the images as heatmaps. These are saved into a ‘Heatmap
 
 ### Command 5: Pick Thresholds for the auto classification
 
-You will first be given the option to auto classify based on a std deviation filter or based on the raw image. 
+You will first be given the option to auto classify based on a std deviation filter or based on the raw image. You can switch this later if it looks like the other option works better (see below).
 
 Dock the figure that appears. 4 images are shown on this figure:
 - Top left: original image
@@ -116,17 +118,20 @@ Hover and click on the docked figure to select the window. This will allow the f
 ### Command 6: Auto classify
 
 Runs auto classification based on one of the following options:
-1) Std deviation filter
+1) Hand picked threshold (based on standard deviation filter) from command 5.
 2) Hand picked threshold (based on raw image) from command 5.
 3) Pre-set threshold per slice (based on raw image). The hand picked threshold from command 5 applied to every slice in the image.
 4) Auto threshold per slice (based on raw image)
 5) Auto threshold per patch (based on raw image)
 
-After processing command 7 will automatically be run. The results from this command will be shown so the initial requirement in command 7 to declare which results to show is skipped. 
+**If you would instead like to use a pre-set threshold (or range of thresholds) for all images (as a sensitivity analysis) or to eg use an automatic thresholding per slice or per patch, please get in touch via [ email or some such] as we may be able to implement this. 
+After processing command 7 will automatically be run. The results from this command will be shown so the initial requirement in command 7 to declare which results to show is skipped.** 
 
 ![command 6 example](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/command6.gif)
 
 ### Command 7: See results from auto classification
+
+**The auto classifier outputs the distributions of large (area >= 50) and small (area >= 10 and <50) objects, as well as the mean eccentricity and mean wiggliness of the large objects and correlates these features with hand classification (if this has been performed). Please note that many other parameters can be extracted and shown (e.g. % of patch above threshold, mean intensity of above threshold objects, etc). Alternatively, it is possible that we can characterise a particular feature or texture you see in patches and extract this as a parameter. Please get in touch via [ email ] if so as we may be able to help.**
 
 Outputs auto classification results from either:
 1) std deviation filter 
@@ -136,6 +141,12 @@ Outputs auto classification results from either:
 You will be asked how to group the data. Enter the number of groups you want or 0 to group each file separately or press return to put include all files into one group.
 
 If a number of groups is entered then the list of file numbers and their corresponding file names will be displayed. Enter the numbers of the file you want to be in the current group and press return. Either repeat again to add a different file into the current group or if finished enter return on its own. This will be repeated for each of the specified groups.
+Note: if you have included a file in multiple groups or haven’t selected all files in the comparison the warning:
+
+****** SOME DUPLICATES ******  or ****** NOT ALL PATCHES USED ******
+          
+will be shown.
+
 
 ![command 7 group files example](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/command7_1.gif)
 
@@ -149,7 +160,7 @@ The following figures will be displayed:
  - **Figure 7:** Mean and std deviation eccentricity box plots of big objects for each group
  - **Figure 8:** Eccentricity histogram of the big objects for each group
 
-The figures after the initial 8 contain 4 subplots:
+If you have hand-classified the files, the figures after the initial 8 contain 4 subplots which correlate the deatures extrackedn with the hand classification:
 
 |         |            |
 | ------------- | ------------- |
