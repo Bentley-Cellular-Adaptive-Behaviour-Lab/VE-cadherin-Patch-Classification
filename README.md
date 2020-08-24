@@ -4,7 +4,13 @@ A quantitive image analysis software written in Matlab, developed by [Andrew Phi
 
 The software was used to 1) manually classify VE-cadherin junctional patterns in individual square patches of 3D confocal image z-stacks of blood vessels aswell as 2) automatically extract and quantify morphological features of segmented objects in the patches.
 
-**Please note that the software was designed collaboratively between Bentley and Philippides so that parameters such as: patch size, definition of small/large objects, object properties to display such as wiggliness, hand classification classes), etc; were co-designed for the problem at hand. While they have proved useful in other studies if you need to vary parameters, or if you would like help to characterise a particular feature or texture you see in patches (see Section 7), please get in touch via email or open an issue on the repository as we may be able to help. Likewise, if you have suggestions for features (see eg section 6) get in touch. And finally, if you do use the software, we’d be grateful if you could get in touch via email to let us know.**
+**Please note:** the software was designed collaboratively between Bentley and Philippides for a specific project, so parameters such as patch size, definition of small/large objects, object properties to display such as wiggliness and the meaning of hand classification classes so the default settings are set as per this project, and have proved useful for several studies with similar aims. However, they can of course be varied or altered for new questions.
+ 
+If you would like help to characterise a particular feature or texture you see in patches please get in touch via email or open an issue on the repository as we may be able to help (see Section 7).
+ 
+If you have suggestions for features please also get in touch via the repo or email. (see Section 6)
+ 
+And finally, if you do use the software, we’d be grateful if you could get in touch via email to let us know.
 
 Andrew Philippides: andrewop@sussex.ac.uk
 
