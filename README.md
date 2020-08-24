@@ -4,7 +4,22 @@ A quantitive image analysis software written in Matlab, developed by [Andrew Phi
 
 The software was used to 1) manually classify VE-cadherin junctional patterns in individual square patches of 3D confocal image z-stacks of blood vessels aswell as 2) automatically extract and quantify morphological features of segmented objects in the patches.
 
-**Please note that the software was designed collaboratively between Bentley and Philippides so that parameters such as: patch size, definition of small/large objects, object properties to display such as wiggliness, hand classification classes), etc; were co-designed for the problem at hand. While they have proved useful in other studies if you need to vary parameters, or if you would like help to characterise a particular feature or texture you see in patches (see Section 7), please get in touch via [maybe set up an email?] as we may be able to help. Likewise, if you have suggestions for features (see eg section 6) get in touch. And finally, if you do use the software, we’d be grateful if you could email XX to let us know.**
+**Please note that the software was designed collaboratively between Bentley and Philippides so that parameters such as: patch size, definition of small/large objects, object properties to display such as wiggliness, hand classification classes), etc; were co-designed for the problem at hand. While they have proved useful in other studies if you need to vary parameters, or if you would like help to characterise a particular feature or texture you see in patches (see Section 7), please get in touch via email or open an issue on the repository as we may be able to help. Likewise, if you have suggestions for features (see eg section 6) get in touch. And finally, if you do use the software, we’d be grateful if you could get in touch via email to let us know.**
+
+Andrew Philippides: andrewop@sussex.ac.uk
+
+Katie Bentley: katie.bentley@crick.ac.uk
+
+Kelvin van Vuuren: kelvin.van-vuuren@crick.ac.uk
+
+## Citation
+If you use or modify this software please cite the Nature Cell paper linked above. However, a methods paper will be published soon which we would prefer to be cited once available.
+
+## Planned features
+
+An implementation of automated classification is planned for development soon. 
+
+We are also keen to extend the codebase in other ways and are open to any suggestions / collaborations. If you modify the codebase and think any new developments would be useful to add into this repository, please open a pull request or get in contact via email.
 
 ## Initial Setup
 
@@ -124,14 +139,14 @@ Runs auto classification based on one of the following options:
 4) Auto threshold per slice (based on raw image)
 5) Auto threshold per patch (based on raw image)
 
-**If you would instead like to use a pre-set threshold (or range of thresholds) for all images (as a sensitivity analysis) or to eg use an automatic thresholding per slice or per patch, please get in touch via [ email or some such] as we may be able to implement this. 
+**If you would instead like to use a pre-set threshold (or range of thresholds) for all images (as a sensitivity analysis) or to eg use an automatic thresholding per slice or per patch, please get in touch via email as we may be able to implement this. 
 After processing command 7 will automatically be run. The results from this command will be shown so the initial requirement in command 7 to declare which results to show is skipped.** 
 
 ![command 6 example](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/command6.gif)
 
 ### Command 7: See results from auto classification
 
-**The auto classifier outputs the distributions of large (area >= 50) and small (area >= 10 and <50) objects, as well as the mean eccentricity and mean wiggliness of the large objects and correlates these features with hand classification (if this has been performed). Please note that many other parameters can be extracted and shown (e.g. % of patch above threshold, mean intensity of above threshold objects, etc). Alternatively, it is possible that we can characterise a particular feature or texture you see in patches and extract this as a parameter. Please get in touch via [ email ] if so as we may be able to help.**
+**The auto classifier outputs the distributions of large (area >= 50) and small (area >= 10 and <50) objects, as well as the mean eccentricity and mean wiggliness of the large objects and correlates these features with hand classification (if this has been performed). Please note that many other parameters can be extracted and shown (e.g. % of patch above threshold, mean intensity of above threshold objects, etc). Alternatively, it is possible that we can characterise a particular feature or texture you see in patches and extract this as a parameter. Please get in touch via email if so as we may be able to help.**
 
 Outputs auto classification results from either:
 1) std deviation filter 
