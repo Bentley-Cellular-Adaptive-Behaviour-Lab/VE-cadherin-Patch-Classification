@@ -1240,38 +1240,43 @@ while 1
     tpl=s2im+bwm+bwb;
 
     stdThreshPlotPatchesSing(ims,i,tpl,L,imax,stdax,opt)
-    disp(['threshold, currently ' int2str(thresh)]);
+
     %         text(-800,-150,'up/down arrow to change threshold; return end' ...
     %         ,'FontSize',14);
     subplot(2,2,2)
-    xlabel([int2str(numbig) ' big objects; ' int2str(numsmall) ' mediums']);
+    xlabel([int2str(numbig) ' big objects. ' int2str(numsmall) ' small objects.']);
     subplot(2,2,4)
     xlabel('\uparrow\downarrow change threshold; n next patch; return end');
     subplot(2,2,3)
     xlabel(['t thresh on ' tstr]);
-
-    [x,~,b]=ginput(1);
-
-    %     inp=input(['enter threshold, currently ' int2str(thresh) '. Return if ok:  ']);
-    if(isempty(x))
-        break;
-    elseif(b==30)
-        %         Increase threshold
-        thresh=min(thresh+tadd,lims(2));
-    elseif(b==31)
-        %         decrease threshold;
-        thresh=max(lims(1),thresh-tadd);
-    elseif(b==110)
-        % get a new patch
-        i=i+1;
-        if(i>length(patches))
-            i=1;
-        end
-    elseif(isequal(b,'t'))
-        if(opt==2)
-            opt=1;
-        else
-            opt=2;
+    
+    disp(['Threshold currently: ' int2str(thresh) '. Press up / down arrow to change. Press N to move to next patch. Press T to switch filter type. Press Return (Enter) key to end.']);
+    w = waitforbuttonpress;
+    if w
+        p = get(gcf, 'CurrentCharacter');
+        p_ascii = double(p);
+        
+        if(p_ascii==13)
+            break; %return key
+        elseif(p_ascii==30)
+            %         Increase threshold, up arrow
+            thresh=min(thresh+tadd,lims(2));
+        elseif(p_ascii==31)
+            %         decrease threshold, down arrow
+            thresh=max(lims(1),thresh-tadd);
+        elseif(p_ascii==110)
+            % get a new patch, n key
+            i=i+1;
+            if(i>length(patches))
+                i=1;
+            end
+        elseif(p_ascii==116)
+            % t key
+            if(opt==2)
+                opt=1;
+            else
+                opt=2;
+            end
         end
     end
 end
@@ -1349,7 +1354,7 @@ while 1
     %         text(-800,-150,'up/down arrow to change threshold; return end' ...
     %         ,'FontSize',14);
     subplot(2,2,2)
-    xlabel([int2str(numbig) ' big objects; ' int2str(numsmall) ' mediums']);
+    xlabel([int2str(numbig) ' big objects. ' int2str(numsmall) ' small objects.']);
     subplot(2,2,4)
     xlabel('up/down arrow to change threshold; n next patch; return end');
 
@@ -1399,7 +1404,7 @@ title(['std filtered image' s2])
 subplot(2,2,2)
 imagesc(tpl);caxis([0 3])
 axis equal; axis tight;
-title('objects (blue), smalls (orange) bigs (red)')
+title('objects: small=green; big=yellow; blue=too small')
 
 subplot(2,2,4)
 imagesc(L)
