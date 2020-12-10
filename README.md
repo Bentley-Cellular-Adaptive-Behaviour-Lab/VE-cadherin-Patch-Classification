@@ -127,12 +127,12 @@ Dock the figure that appears. 4 images are shown on this figure:
 
 ![command 5 example 1](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/command5_1.gif)
 
-Hover and click on the docked figure to select the window. This will allow the following commands to be inputted:
+The following instructions will now be taken via the command window:
 - **UP arrow:** increase threshold
 - **DOWN arrow:** decrease threshold
-- **T:** switch between std deviation filter and raw image (this will change the 'THRESHOLDING THIS' text to switch to the currently selected)
-- **N:** move to next patch. Use this to check current threshold is compatible with other patches.
-- **Return:** confirm threshold value and run an auto classification based on this hand picked threshold (equivalent to option 2 from command 6).
+- **t:** switch between std deviation filter and raw image (this will change the 'THRESHOLDING THIS' text to switch to the currently selected)
+- **n:** move to next patch. Use this to check current threshold is compatible with other patches.
+- **return/enter:** confirm threshold value and run an auto classification based on this hand picked threshold (equivalent to option 2 from command 6).
 
 ![command 5 example 2](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/command5_2.gif)
 
