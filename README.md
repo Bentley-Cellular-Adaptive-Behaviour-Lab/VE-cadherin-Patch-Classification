@@ -225,7 +225,8 @@ if a user hand classified the images they did it by entering two values based on
 
 These relate to the 1-6 classes in the paper [Bentley NCB 2014](https://doi.org/10.1038/ncb2926) and following papers – where -3 is shifted to 1 and 3 shifted to 6.
 
-**Ptype 4 was used to say a patch was empty and was given no class **
+**Ptype 4 was used to say a patch was empty and was given no class.**
+
 **Ptype 3 was used to say there was a mixture of active and inhibited in the patch then the class was given as 6 and later the user could enter a specfic class for each aspect of the patch.**
 ![ptypes of dat example](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/ptypes_in_dat.png)
 
