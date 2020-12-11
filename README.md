@@ -145,14 +145,17 @@ Runs auto classification based on one of the following options:
 4) Auto threshold per slice (based on raw image)
 5) Auto threshold per patch (based on raw image)
 
-**If you would instead like to use a pre-set threshold (or range of thresholds) for all images (as a sensitivity analysis) or to eg use an automatic thresholding per slice or per patch, please get in touch via email as we may be able to implement this. 
-After processing command 7 will automatically be run. The results from this command will be shown so the initial requirement in command 7 to declare which results to show is skipped.** 
+**If you would instead like to use a pre-set threshold (or range of thresholds) for all images (as a sensitivity analysis) or to eg use an automatic thresholding per slice or per patch, please get in touch via email as we may be able to implement this.**
+
+After processing command 7 will automatically be run. The results from this command will be shown so the initial requirement in command 7 to declare which results to show is skipped.
 
 ![command 6 example](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/command6.gif)
 
 ### Command 7: See results from auto classification
 
-**The auto classifier outputs the distributions of large (area >= 50) and small (area >= 10 and <50) objects, as well as the mean eccentricity and mean wiggliness of the large objects and correlates these features with hand classification (if this has been performed). Please note that many other parameters can be extracted and shown (e.g. % of patch above threshold, mean intensity of above threshold objects, etc). Alternatively, it is possible that we can characterise a particular feature or texture you see in patches and extract this as a parameter. Please get in touch via email if so as we may be able to help.**
+The auto classifier outputs the distributions of large (area >= 50 pixels) and small (area >= 10 and <50 pixel) objects, as well as the mean eccentricity and mean wiggliness of the large objects and correlates these features with hand classification (if this has been performed). Please note that many other parameters can be extracted and shown (e.g. % of patch above threshold, mean intensity of above threshold objects, etc). 
+
+**Alternatively, it is possible that we can characterise a particular feature or texture you see in patches and extract this as a parameter. Please get in touch via email if so as we may be able to help.**
 
 Outputs auto classification results from either:
 1) std deviation filter 
@@ -181,7 +184,7 @@ The following figures will be displayed:
  - **Figure 7:** Mean and std deviation eccentricity box plots of big objects for each group
  - **Figure 8:** Eccentricity histogram of the big objects for each group
 
-If you have hand-classified the files, the figures after the initial 8 contain 4 subplots which correlate the deatures extrackedn with the hand classification:
+If you have hand-classified the files, the figures after the initial 8 contain 4 subplots which correlate the features extracted with the hand classification:
 
 |         |            |
 | ------------- | ------------- |
@@ -209,10 +212,9 @@ To view the data: Load the .mat file either by typing load filename.mat or just 
 
 ### Accessing the hand classification results
 
-if a user hand classified the images they did it by entering:
-Hand classification of an image is done by entering:
- -	**Ptype**: patch type: 1 = active, 2 = inhibited, any other number meant disregard no vessel in patch. 
- -	**Stren**: strength: 1 = strong,  2 = medium , 3 = weak
+if a user hand classified the images they did it by entering two values based on the wiggliness of lines and presence of diffuse (small objects) (**Active**) or absence of small objects and straightness of lines (**Inhibited**), with 3 gradations of each relating to how wiggly and diffuse the objects appear (strong = very, medium, weak = less so). Specifically they entered:
+ -	**Ptype**: patch type: 1 = active, 2 = inhibited, any other number meant disregard as no vessel in patch (4 was usual for this). 
+ -	**Stren**: strength of activity/inhibition: 1 = strong,  2 = medium , 3 = weak
  -	**Class**: is then calculated from ptype and stren - as follows: 
    -3 = 1,1 (strongly active) = wiggliest lines, more diffuse particles (no. of objects higher)
    -2 = 1,2 (medium active) 
@@ -223,8 +225,8 @@ Hand classification of an image is done by entering:
 
 These relate to the 1-6 classes in the paper [Bentley NCB 2014](https://doi.org/10.1038/ncb2926) and following papers – where -3 is shifted to 1 and 3 shifted to 6.
 
-**Ptype 4 was used to say a patch was empty. Ignore these.**
-**Ptype 3 was used to say there was a mixture of active and inhibited in the patch then the class was given as 6 .. for now ignore these (red below). Others useable - green.**
+**Ptype 4 was used to say a patch was empty and was given no class **
+**Ptype 3 was used to say there was a mixture of active and inhibited in the patch then the class was given as 6 and later the user could enter a specfic class for each aspect of the patch.**
 ![ptypes of dat example](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/ptypes_in_dat.png)
 
 ### Finding the patch image dat struct relates to
