@@ -194,3 +194,45 @@ If you have hand-classified the files, the figures after the initial 8 contain 4
 
 ![command 7 figure output example](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/command7_2.gif)
 
+### How information is stored in a classified data file
+
+Each classified data file contains a data structure called dat that is a 1 x P array (for each patch P) containing 14-24 fields of information about that specific patch including the patch name
+
+To view the data: Load the .mat file either by typing load filename.mat or just drag and drop into Matlab. Then, double click the dat that appears in Workspace to view as a table of values or type any of the following to view certain parts of the data (In the example commands below, n = patch number):
+ - dat(n): Will show all the properties of patch n.
+ -	dat(n).class: Gives the class a human classified it with
+ -	dat(n).n_s: Gives the number of small objects found in patch n in the dataset
+
+![properties of dat example](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/property_fields_in_dat.png)
+
+**Features are set in AnalysePatchIm so looking in there can help identify exactly what they mean and how they are calculated.**
+
+### Accessing the hand classification results
+
+if a user hand classified the images they did it by entering:
+Hand classification of an image is done by entering:
+ -	**Ptype**: patch type: 1 = active, 2 = inhibited, any other number meant disregard no vessel in patch. 
+ -	**Stren**: strength: 1 = strong,  2 = medium , 3 = weak
+ -	**Class**: is then calculated from ptype and stren - as follows: 
+   -3 = 1,1 (strongly active) = wiggliest lines, more diffuse particles (no. of objects higher)
+   -2 = 1,2 (medium active) 
+   -1 = 1,3 (weakly active) 
+    1 = 2,3 (weakly inhibited)
+    2 = 2,2 (medium inhibited)
+    3 = 2,1 (strongly inhibited)  =  straightest lines no small diffuse particles  (small objects)
+
+These relate to the 1-6 classes in the paper [Bentley NCB 2014](https://doi.org/10.1038/ncb2926) and following papers – where -3 is shifted to 1 and 3 shifted to 6.
+
+**Ptype 4 was used to say a patch was empty. Ignore these.**
+**Ptype 3 was used to say there was a mixture of active and inhibited in the patch then the class was given as 6 .. for now ignore these (red below). Others useable - green.**
+![ptypes of dat example](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/ptypes_in_dat.png)
+
+### Finding the patch image dat struct relates to
+
+**imagesc(dat(n).p_im):** shows the actual patch image in a plot.
+**imagesc(dat(n).m_im):** shows the mask the user thresholded that was used to segment the autofeatures.
+**dat.fn_im:** to see the patch filename and look in the folder at the patch image that accompanies this full dataset. 
+
+![ptypes of dat example](https://github.com/Bentley-Cellular-Adaptive-Behaviour-Lab/VE-cadherin-Patch-Classification/blob/master/gifs/p_im_example.png)
+
+
